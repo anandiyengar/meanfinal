@@ -6,6 +6,10 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const userAuth = require("./Routers/user");
 const mongoose = require("mongoose");
+
+var distDir = __dirname + "/dist/meanapp-final";
+app.use(express.static(distDir));
+
 mongoose.connect("mongodb+srv://anandiyengar1993:Anand@1993@cluster0.iyflr.mongodb.net/blog-app",{
     useCreateIndex:true,
     useUnifiedTopology:true,
@@ -15,8 +19,7 @@ mongoose.connect("mongodb+srv://anandiyengar1993:Anand@1993@cluster0.iyflr.mongo
 }).catch((err)=>{
     console.log("SOMETHING IS WRONG BHAI!");
 })
-var distDir = __dirname + "/dist/";
-app.use(express.static(distDir));
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use(cookieParser());
