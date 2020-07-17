@@ -13,9 +13,10 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.0.4",
-    "@angular/common": "~10.0.4",
-    "@angular/cli": "~10.0.3",
+    "@angular/compiler": "^10.0.4",
     "@angular/compiler-cli": "~10.0.4",
+    "@angular/cli": "~10.0.3",
+    "@angular/common": "~10.0.4",
     "@angular/core": "~10.0.4",
     "@angular/forms": "~10.0.4",
     "@angular/platform-browser": "~10.0.4",
@@ -51,7 +52,7 @@
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
   },
-  "engines":{
+  "engines": {
     "node": "12.16.2",
     "npm": "6.14.4"
   }
